@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', 'Noto Sans SC', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+  color: #f5f5f5;
+  text-align: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    radial-gradient(circle at 50% 80%, rgba(150, 0, 0, 0.5), transparent 50%),
+    radial-gradient(circle at 30% 100%, rgba(100, 0, 0, 0.3), transparent 60%),
+    radial-gradient(circle at 70% 100%, rgba(100, 0, 0, 0.3), transparent 60%),
+    linear-gradient(to bottom, #000000 0%, #050505 50%, #0f0f0f 100%);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 2000px;
+  flex-wrap: wrap;              
+  padding: 0px 40px;
+  background: rgba(0, 0, 0); 
+ 
+}
+
+
+.logo img {
+  height: 70px;                
+  max-width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+
+.nav-links {
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;  
+  transition: transform 10s ease-in-out;          
+}
+
+.logo img:hover {
+  transform: scale(1.07);      
+}
+
+
+.nav-links a {
+position: relative;
+color: rgb(253, 252, 252);
+text-decoration: none;
+font-size: 18px;
+background-color: black;
+}
+
+.nav-links a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -4px;
+width: 0%;
+height: 2px;
+background: #f0626e;
+transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+width: 100%;
+}
+
+.grad-text {
+    background: linear-gradient(
+        90deg,
+#d63384 0%,
+#e0528f 12.5%,
+#f0626e 25%,
+#ff7a5c 37.5%,
+#ff8c42 50%,
+#ff7a5c 60%,
+#f0626e 75%,
+#e0528f 87.5%,
+#d63384 100%
+);
+
+  background-size: 250%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: cyanFlow 10s ease-in-out infinite;
+}
+
+@keyframes cyanFlow {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 125% center;
+  }
+  100% {
+    background-position: 250% center;
+  }
+}
+
+
+h1 {
+  margin-top: clamp(6rem, 12vw, 12rem);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  line-height: 1.15;
+  text-align: center;
+}
+
+h2 {
+  display: inline-block;
+  letter-spacing: -0.5px;
+  line-height: 1.5;
+  text-align: center;
+  font-size: clamp(20px, 2vw, 60px);
+color: #f5f5f5f4;
+opacity: 0.8;
+margin-top: 12px;
+font-weight: 400;
+margin-bottom: clamp(6rem, 12vw, 12rem);
+}
+
+
+.featuresHeading {
+  font-size: clamp(20px, 2vw, 40px);
+  text-align: center;
+
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: clamp(20px, 5vw, 60px);
+  flex-wrap: wrap; 
+  margin-top: clamp(2rem, 4vw, 4rem);
+  margin-bottom: clamp(2rem, 2vw, 4rem);
+}
+
+.featureBox {
+  flex: 1 1 300px; 
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .featureBox {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.featureBox:hover {
+  transform: translateY(-10px) scale(1.04);
+  
+}
+
+.features-sub {
+  font-size: clamp(15px, 1.5vw, 18px);
+  text-align: center;
+  margin-top: clamp(0.25rem, 0.25vw, 0.5rem);
+  margin-bottom: clamp(1rem, 3.5vw, 5rem);
+  color: #f5f5f5f4;
+  opacity: 0.9;
+}
+
+.feature-image {
+  width: clamp(50px, 7vw, 125px);
+  height: clamp(50px, 7vw, 125px);
+  object-fit: cover;
+  margin-bottom: clamp(20px, 2vw, 40px);
+  border-radius: 25%;
+}
+
+.feature-title {
+  letter-spacing: -0.5px;
+  margin-bottom: clamp(0.25rem, 0.25vw, 0.5rem);
+  font-weight: 150;
+}
+
+.feature-description {
+  opacity: 0.7;
+}
+.ourGames {
+  font-size: clamp(20px, 2vw, 40px);
+  margin-top: clamp(10rem, 1vw, 30rem);
+  text-align: left;
+  margin-left: clamp(0.25rem, 2.5vw, 5rem);
+}
+
+.ourGames-sub {
+  font-size: clamp(15px, 1.5vw, 18px);
+  text-align: left;
+  margin-left: clamp(0.25rem, 2.5vw, 5rem);
+  color: #f5f5f5f4;
+  opacity: 0.9;
+}
