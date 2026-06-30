@@ -220,3 +220,59 @@ margin-bottom: clamp(6rem, 12vw, 12rem);
   color: #f5f5f5f4;
   opacity: 0.9;
 }
+.allGames {
+  margin: clamp(2rem, 1vw, 4rem);
+  gap: clamp(2rem, 1vw, 4rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+
+}
+.gameBox {
+  margin:10px;
+  background-color: rgba(65,25,30);
+  border-radius: 10px;
+  border: 1px solid rgb(165, 62, 74);
+  display: flex;
+  flex-direction: column;   
+  align-items: center;      
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.gameBox:hover {
+  transform: translateY(-4px) scale(1.004);
+  box-shadow: 0 0 20px rgba(193, 23, 23, 0.967);
+}
+
+.gameImage {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px 10px 0 0;
+}
+
+.playButton {
+  background-color: #f42334;
+  color: #fff;
+  border: none;
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 2vw, 2rem);
+  font-size: clamp(14px, 1.5vw, 18px);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+.footer{
+  background-color: rgba(0, 0, 0);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding:clamp(1rem, 1vw, 2rem) clamp(1rem, 1vw, 4rem);
+}
