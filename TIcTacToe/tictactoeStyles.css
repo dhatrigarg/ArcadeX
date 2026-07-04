@@ -1,0 +1,19 @@
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: #c5b8b88b;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

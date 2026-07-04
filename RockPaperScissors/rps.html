@@ -9,30 +9,38 @@
 </head>
 <body>
     <h3>Rock Paper Scissors</h3>
+    
     <div class="features">
         <div class="featureBox" id="rock" >
             <img src="rock.png" class="feature-image"> 
         </div>
-        <div class="featureBox" >
+        <div class="featureBox" id="paper" >
             <img src="paper.png" class="feature-image "> 
         </div>
-        <div class="featureBox" >
+        <div class="featureBox" id="scissors" >
             <img src="scissors.png" class="feature-image"> 
         </div>
     </div>
     <div class="score">
         <div>
-            <p class="scoreNum">0</p>
+            <p class="scoreNum" id="userScore">0</p>
             <p class="belowHeading">YOU</p>
         </div>
         <div>
-            <p class="scoreNum">0</p>
+            <p class="scoreNum" id="botScore">0</p>
             <p class="belowHeading">BOT</p>
         </div>
     </div>
     <div class="result">
-        <button>Make Your Move!</button>
+        <button>Make your move</button>
     </div>
+    <div class="rules">
+    <h4>Rules:</h4>
+    <p>1.Rock beats Scissors, Scissors beats Paper, Paper beats Rock.</p>
+    <p>2. You have 5 chances to play.</p>
+    <p>3. You need to click on your choice to play.</p>
+    </div>
+    <script src="rpsScript.js"></script>
 </body>
 </html>
 
