@@ -8,38 +8,31 @@
     <link rel="stylesheet" href="rpsStyles.css">
 </head>
 <body>
-    <h3>Rock Paper Scissors</h3>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../images/logo.png" alt="ArcadeX Logo">
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Back to Home</a>
+        </div>
+    </nav>
+    <h3> 
+        <span class="first">ROCK</span>
+        <span class="second">PAPER</span>
+        <span class="third">SCISSORS</span>
+    </h3>
+    <p class="features-sub" id="features-sub-one">The classic game. Endless fun.</p>
+    <p class="features-sub" id="features-sub-two">Choose your move and beat the computer.</p>
     
-    <div class="features">
-        <div class="featureBox" id="rock" >
-            <img src="rock.png" class="feature-image"> 
+    <section class="container">
+        <div class="box left">
         </div>
-        <div class="featureBox" id="paper" >
-            <img src="paper.png" class="feature-image "> 
+        <div class="box center">
+            <h3 class="grad-text" id="featuresMain">Make your move</h3>
         </div>
-        <div class="featureBox" id="scissors" >
-            <img src="scissors.png" class="feature-image"> 
-        </div>
-    </div>
-    <div class="score">
-        <div>
-            <p class="scoreNum" id="userScore">0</p>
-            <p class="belowHeading">YOU</p>
-        </div>
-        <div>
-            <p class="scoreNum" id="botScore">0</p>
-            <p class="belowHeading">BOT</p>
-        </div>
-    </div>
-    <div class="result">
-        <button>Make your move</button>
-    </div>
-    <div class="rules">
-    <h4>Rules:</h4>
-    <p>1.Rock beats Scissors, Scissors beats Paper, Paper beats Rock.</p>
-    <p>2. You have 5 chances to play.</p>
-    <p>3. You need to click on your choice to play.</p>
-    </div>
+        <div class="box right">Right Box</div>
+    </section>
+
     <script src="rpsScript.js"></script>
 </body>
 </html>

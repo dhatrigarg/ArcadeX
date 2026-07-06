@@ -116,13 +116,25 @@ border-radius: 5px
   }
 }
 
+.first {
+  color: #9045fa;
+}
+
+.second {
+  color: #2668f8; 
+}
+
+.third {
+  color: #f63b6d; 
+}
+
 
 h1 {
-  font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+  font-family: 'Orbitron' , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
   margin-top: clamp(6rem, 12vw, 12rem);
   font-size: clamp(2.5rem, 8vw, 4.5rem);
-  font-weight: 650;
-  letter-spacing: -3px;
+  font-weight: 700;
+  letter-spacing: -2px;
   margin-bottom: clamp(0.5rem, 1vw, 1rem);
   line-height: 1.2;
   text-align: center;
@@ -144,15 +156,16 @@ font-weight: 400;
 margin-bottom: clamp(6rem, 12vw, 12rem);
 }
 
-#featuresMain {
-  font-size: clamp(20px, 2vw, 40px);
-}
 
 
 .featuresHeading {
-  font-size: clamp(20px, 2vw, 30px);
+  font-size: clamp(20px, 1.7vw, 30px);
   text-align: center;
+  
+}
 
+#featuresMain {
+  font-size: clamp(20px, 2.2vw, 40px);
 }
 
 .features {
@@ -184,7 +197,7 @@ margin-bottom: clamp(6rem, 12vw, 12rem);
 
 .featureBox:hover {
   transform: translateY(-10px) scale(1.04);
-  
+  border-color: rgba(255, 255, 255, 0.37);
 }
 
 .features-sub {
@@ -192,15 +205,14 @@ margin-bottom: clamp(6rem, 12vw, 12rem);
   text-align: center;
   margin-top: clamp(0.25rem, 0.25vw, 0.5rem);
   margin-bottom: clamp(1rem, 3.5vw, 5rem);
-  color: #f5f5f5f4;
-  opacity: 0.9;
+  color: #f5f5f5dd;
 }
 
 .feature-image {
   width: clamp(50px, 7vw, 125px);
   height: clamp(50px, 7vw, 125px);
   object-fit: cover;
-  border-radius: 25%;
+  border-radius: 50%;
 }
 
 .feature-title {
