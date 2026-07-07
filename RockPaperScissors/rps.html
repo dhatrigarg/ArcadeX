@@ -6,6 +6,7 @@
     <title>Rock Paper Scissors Game</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="rpsStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
@@ -26,11 +27,44 @@
     
     <section class="container">
         <div class="box left">
+            <div class="sideHeading">
+                <span><i class="fa-solid fa-question" style="color:#A855F7;"></i></span><span>  HOW TO PLAY</span>
+            </div>
+            <div class="points">
+                <p>✊<span class="first"> Rock</span> crushes <span class="third"> Scissors</span></p>
+                <p>🖐️<span class="second"> Paper</span> covers <span class="first"> Rock</span></p>
+                <p>✌️<span class="third"> Scissors</span> cuts <span class="second"> Paper</span></p>
+            </div>
         </div>
         <div class="box center">
             <h3 class="grad-text" id="featuresMain">Make your move</h3>
+            <div class="rpsAll">
+                <div class="rpsBox">
+                    <img src="../images/game1.png" alt="Rock" id="rock" class="rps-image">
+                    <h4 class="first">Rock</h4>
+                </div>
+                <div class="rpsBox">
+                    <img src="../images/game1.png" alt="Paper" id="paper" class="rps-image">
+                    <h4 class="second">Paper</h4>
+                </div>
+                <div class="rpsBox">
+                    <img src="../images/game1.png" alt="Scissors" id="scissors" class="rps-image">
+                    <h4 class="third">Scissors</h4>
+                </div>
+            </div>
+            <button class="btn">Reset Score</button>
         </div>
-        <div class="box right">Right Box</div>
+        <div class="box right">
+            <div class="sideHeading">
+                <span><i class="fa-solid fa-trophy" style="color:#A855F7;"></i></span><span>  YOUR SCORE</span>
+            </div>
+            <div class="points" id="rightPoints">
+                <p>🎊  Wins : <span id="playerScore" class="first"> 0</span></p>
+                <p>💀  Losses : <span id="computerScore" class="second"> 0</span></p>
+                <p>📊  Win Rate : <span class="third"> <span id="winRate"> 0</span>%</span></p>
+            </div>
+        </div>
+
     </section>
 
     <script src="rpsScript.js"></script>

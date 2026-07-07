@@ -9,7 +9,7 @@ h3 {
   font-family: fantasy , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
     margin-top: 20px;
     font-weight: 100;
-    font-size: clamp(20px, 5vw, 40px);
+    font-size: clamp(50px, 7vw, 60px);
     word-spacing: 2px;
 }
 
@@ -69,8 +69,95 @@ h3 {
 }
 
 
+.sideHeading {
+  font-family:'Orbitron' , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: clamp(10px, 4.5vw, 30px);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+.points {
+  font-family:'Orbitron' , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+  font-size: clamp(10px, 4.5vw, 30px);
+  text-align: left;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-weight: 500;
+  color: rgb(200, 197, 197)
+}
+
+
+
+
 #featuresMain{
   font-family: 'Orbitron' , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
   font-weight: 700;
   font-size: clamp(8px, 4vw, 25px);
+}
+
+
+.rpsAll {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(0.5rem, 1vw, 1rem);
+  margin-bottom: clamp(0.5rem, 1vw, 1rem);
+}
+
+
+.rps-image {
+  width: clamp(75px, 11vw, 200px);
+  height: clamp(75px, 11vw, 200px);
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.rps-image:hover {
+  transform: scale(1.05);
+}
+
+.rpsBox {
+  padding: clamp(0.5rem, 0.5vw, 1rem);
+  background-color: #071222;
+  flex: 1 1 300px; 
+  max-width: 300px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .rpsBox {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+.btn{
+  background: linear-gradient(
+    90deg,
+    #3B82F6,
+    #6366F1,
+    #8B5CF6,
+    #7C3AED,
+    #EC4899,
+    #EF4444
+  );
+  color: white;
+  padding: 5px 10px;
+  font-weight: 600;
+  font-size: clamp(10px, 2vw, 20px);
+  border-radius: 5px;
+margin-top: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.02);
 }

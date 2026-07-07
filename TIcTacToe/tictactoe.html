@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../RockPaperScissors/rpsStyles.css">
     <link rel="stylesheet" href="tictactoeStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
@@ -20,23 +21,54 @@
     <h3><span class="first">TIC</span>
         <span class="second">TAC</span>
         <span class="third">TOE</span></h3>
-    <div>
-       <div class="game">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </div>
     
-    <button id="reset">Reset Game</button>
-    <p id="status">Player X Turn</p> 
+        
+        <p class="features-sub" id="features-sub-one">The classic game of Xs and Os.</p>
+        <p class="features-sub" id="features-sub-two">Challenge your friend.</p>
+        
+        <section class="container">
+            <div class="box left">
+            <div class="sideHeading">
+                <span><i class="fa-solid fa-question" style="color:#A855F7;"></i></span><span>  HOW TO PLAY</span>
+            </div>
+            <div class="points">
+                <p>❌ X and O take turns</p>
+                <p>3️⃣ Get 3 in a row to win</p>
+                <p>⭕ Rows, columns or diagonals</p>
+                <p>🤝 Board full? It's a draw</p>
+            </div>
+        </div>
+        <div class="box center">
+            <h3 class="grad-text" id="featuresMain">Play the game</h3>
+            <p id="status">Player X Turn</p> 
+            <div class="game">
+                <div class="gamebox"></div>
+                <div class="gamebox"></div>
+        <div class="gamebox"></div>
+        
+        <div class="gamebox"></div>
+        <div class="gamebox"></div>
+        <div class="gamebox"></div>
+        
+        <div class="gamebox"></div>
+        <div class="gamebox"></div>
+        <div class="gamebox"></div>
+    </div>
+    <button class="btn">Reset Game</button>
+        </div>
+        <div class="box right">
+            <div class="sideHeading">
+                <span><i class="fa-solid fa-trophy" style="color:#A855F7;"></i></span><span>  YOUR SCORE</span>
+            </div>
+            <div class="points" id="rightPoints">
+                <p>🎊  Wins : <span id="playerScore" class="first"> 0</span></p>
+                <p>💀  Losses : <span id="computerScore" class="second"> 0</span></p>
+                <p>🤝  Draws : <span id="drawScore" class="third"> 0</span></p>
+                <p>📊  Win Rate : <span class="first"> <span id="winRate"> 0</span>%</span></p>
+            </div>
+        </div>
+    </section>
+
     <script src="tictactoe.js"></script>
 </div>
 </body>
