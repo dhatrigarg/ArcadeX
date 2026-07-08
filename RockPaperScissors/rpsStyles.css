@@ -13,6 +13,10 @@ h3 {
     word-spacing: 2px;
 }
 
+h4 {
+  margin-top: 10px;
+  font-size: 22px;
+}
 .features-sub {
   margin: 5px;
 }
@@ -153,8 +157,7 @@ h3 {
   font-weight: 600;
   font-size: clamp(10px, 2vw, 20px);
   border-radius: 5px;
-margin-top: 25px;
-  cursor: pointer;
+  margin-top: 25px;
   transition: transform 0.3s ease;
 }
 
