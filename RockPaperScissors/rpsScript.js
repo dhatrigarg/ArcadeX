@@ -1,14 +1,17 @@
-
 let Rock = document.getElementById("rock");
 let Paper = document.getElementById("paper");
 let Scissors = document.getElementById("scissors");
-let resultBtn = document.querySelector(".btn");
+
 let playerScore = document.getElementById("playerScore");
-let computerScore = document.getElementById("computerScore");
-let winScore = document.getElementById("winRate")
 let userScore = 0;
+
+let computerScore = document.getElementById("computerScore");
 let botScore = 0;
+
+let winScore = document.getElementById("winRate")
 let winPercent = 0;
+
+let resultBtn = document.querySelector(".btn");
 
 rock.addEventListener("click", function() {
     playGame("Rock");
@@ -21,6 +24,7 @@ scissors.addEventListener("click", function() {
 });
         
 function playGame(userChoice) {
+    
     let choice_list=["Rock", "Paper", "Scissors"];
     let randomIndex = Math.floor(Math.random() * 3);
     let computerChoice = choice_list[randomIndex];

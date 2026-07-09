@@ -1,22 +1,22 @@
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 h3 {
   font-family: fantasy , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
-    margin-top: 20px;
-    font-weight: 100;
-    font-size: clamp(50px, 7vw, 60px);
-    word-spacing: 2px;
+  margin-top: 20px;
+  font-weight: 100;
+  font-size: clamp(50px, 7vw, 60px);
+  word-spacing: 2px;
 }
 
 h4 {
   margin-top: 10px;
   font-size: 22px;
 }
+
 .features-sub {
   margin: 5px;
 }
@@ -24,43 +24,40 @@ h4 {
 #features-sub-one {
   color: white;
 }
+
 #features-sub-two {
   color: rgba(255, 255, 255, 0.608);
 }
 
-
 .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr; 
-    gap: 20px;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; 
+  gap: 20px;
+  padding: 20px;
 }
 
-
 .box {
-    background: #071222;
-    padding: 10px;
-    color: white;
-    border-radius: 10px;
+  background: #071222;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .left, .right {
-    opacity: 0.9;
-    transform: scale(0.7);
+  opacity: 0.9;
+  transform: scale(0.7);
 }
 
 .center {
-    min-height: 300px;
+  min-height: 300px;
 }
-
 
 @media (max-width: 900px) {
     .container {
         grid-template-columns: 1fr 1.5fr 1fr;
     }
 }
-
 
 @media (max-width: 600px) {
     .container {
@@ -72,7 +69,6 @@ h4 {
     }
 }
 
-
 .sideHeading {
   font-family:'Orbitron' , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
   font-weight: 700;
@@ -80,7 +76,6 @@ h4 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-
 
 .points {
   font-family:'Orbitron' , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
@@ -94,15 +89,11 @@ h4 {
   color: rgb(200, 197, 197)
 }
 
-
-
-
 #featuresMain{
   font-family: 'Orbitron' , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
   font-weight: 700;
   font-size: clamp(8px, 4vw, 25px);
 }
-
 
 .rpsAll {
   display: flex;
@@ -110,7 +101,6 @@ h4 {
   margin-top: clamp(0.5rem, 1vw, 1rem);
   margin-bottom: clamp(0.5rem, 1vw, 1rem);
 }
-
 
 .rps-image {
   width: clamp(75px, 11vw, 200px);
@@ -139,8 +129,6 @@ h4 {
     max-width: 100%;
   }
 }
-
-
 
 .btn{
   background: linear-gradient(

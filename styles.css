@@ -30,9 +30,7 @@ body {
   background: rgba(1, 0, 23); 
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.2);
- 
 }
-
 
 .logo img {
   height: 70px;                
@@ -40,7 +38,6 @@ body {
   transition: transform 0.3s ease;
   padding: 5px;
 }
-
 
 .nav-links {
   cursor: pointer;
@@ -53,7 +50,6 @@ body {
 .logo img:hover {
   transform: scale(1.07);      
 }
-
 
 .nav-links a {
 position: relative;
@@ -82,12 +78,9 @@ border-radius: 5px
         #6366F1 90%,
         #3B82F6 100%
     );
-
   background-size: 250%;
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   animation: cyanFlow 7s ease-in-out infinite;
 }
 
@@ -103,18 +96,9 @@ border-radius: 5px
   }
 }
 
-.first {
-  color: #9e5dfa;
-}
-
-.second {
-  color: #2668f8; 
-}
-
-.third {
-  color: #f63b6d; 
-}
-
+.first {color: #9e5dfa;}
+.second {color: #2668f8;}
+.third {color: #f63b6d;}
 
 h1 {
   font-family: 'Orbitron' , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
@@ -136,19 +120,16 @@ h2 {
   line-height: 1.5;
   text-align: center;
   font-size: clamp(20px, 2vw, 60px);
-color: #f5f5f5f4;
-opacity: 0.8;
-margin-top: 12px;
-font-weight: 400;
-margin-bottom: clamp(6rem, 12vw, 12rem);
+  color: #f5f5f5f4;
+  opacity: 0.8;
+  margin-top: 12px;
+  font-weight: 400;
+  margin-bottom: clamp(6rem, 12vw, 12rem);
 }
-
-
 
 .featuresHeading {
   font-size: clamp(20px, 1.7vw, 30px);
   text-align: center;
-  
 }
 
 #featuresMain {
@@ -228,14 +209,15 @@ margin-bottom: clamp(6rem, 12vw, 12rem);
   color: #f5f5f5f4;
   opacity: 0.9;
 }
+
 .allGames {
   margin: clamp(2rem, 1vw, 4rem);
   gap: clamp(2rem, 1vw, 4rem);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-
 }
+
 .gameBox {
   margin:10px;
   padding: 2px;
@@ -255,9 +237,8 @@ margin-bottom: clamp(6rem, 12vw, 12rem);
   content: "";
   position: absolute;
   inset: 0;
-  padding: 2px; /* border thickness */
+  padding: 2px; 
   border-radius: 10px;
-
   background: linear-gradient(
     90deg,
     #3B82F6,
@@ -267,24 +248,19 @@ margin-bottom: clamp(6rem, 12vw, 12rem);
     #EC4899,
     #EF4444
   );
-
-  /* Mask trick to show only border */
   -webkit-mask: 
     linear-gradient(#000 0 0) content-box, 
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-
   z-index: -1;
 }
-
 
 .gameBox::after {
   content: "";
   position: absolute;
   inset: -10px;
   border-radius: 10px;
-
   background: linear-gradient(
     90deg,
     #3B82F6,
@@ -292,10 +268,8 @@ margin-bottom: clamp(6rem, 12vw, 12rem);
     #EC4899,
     #EF4444
   );
-
   filter: blur(20px);
   opacity: 0.6;
-
   z-index: -2;
 }
 
