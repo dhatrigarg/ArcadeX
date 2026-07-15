@@ -1,0 +1,24 @@
+.grid {
+    margin: 10px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 80vw;
+  max-width: 350px;
+  background: #0f172a;
+  padding: 10px;
+  border-radius: 12px;
+  aspect-ratio: 1 / 0.75;
+}
+
+.cell {
+  background: #1f2937;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  aspect-ratio: 1 / 0.75;
+}
