@@ -5,20 +5,32 @@
   gap: 10px;
   width: 80vw;
   max-width: 350px;
-  background: #0f172a;
+  background: #0d1e45;
   padding: 10px;
   border-radius: 12px;
   aspect-ratio: 1 / 0.75;
 }
 
 .cell {
-  background: #1f2937;
+  background: #071222;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
+  font-size: 25px;
   font-weight: bold;
   color: white;
   aspect-ratio: 1 / 0.75;
 }
+
+.cell-2   { background: #374151; border: 1px solid rgba(255, 255, 255, 0.384);}   
+.cell-4   { background: #1d4ed8; border: 1px solid rgba(255, 255, 255, 0.384);}   
+.cell-8   { background: #7c3aed; border: 1px solid rgba(255, 255, 255, 0.384);}   
+.cell-16  { background: #9333ea; border: 1px solid rgba(255, 255, 255, 0.384);}   
+.cell-32  { background: #c026d3; border: 1px solid rgba(255, 255, 255, 0.384);}   
+.cell-64  { background: #e11d48; border: 1px solid rgba(255, 255, 255, 0.384);}   
+.cell-128 { background: #f97316; border: 1px solid rgba(255, 255, 255, 0.384);}   
+.cell-256 { background: #f59e0b; border: 1px solid rgba(255, 255, 255, 0.384);}   
+.cell-512 { background: #eab308; border: 1px solid rgba(255, 255, 255, 0.384);}
+.cell-1024{ background: #84cc16; border: 1px solid rgba(255, 255, 255, 0.384);}
+.cell-2048{ background: #22c55e; border: 1px solid rgba(255, 255, 255, 0.384);}   

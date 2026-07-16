@@ -59,7 +59,14 @@ function updateUI(){
             let index = i*4+j;
             let value = board[i][j];
 
-            cells[index].innerText = value === 0 ? "" : value ;
+            let cell = cells[index];
+            cell.className = "cell";
+
+            cell.innerText = value === 0 ? "" : value ;
+
+            if (value !== 0) {
+                cell.classList.add(`cell-${value}`);
+            }
         }
     }   
 }
