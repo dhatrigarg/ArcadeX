@@ -13,7 +13,7 @@
             <img src="images/logo.png" alt="ArcadeX Logo">
         </div>
         <div class="nav-links">
-            <a>Menu</a>
+            <button id="loginBtn">Login</button>
         </div>
     </nav>
 
@@ -79,10 +79,29 @@
     </div>
 
 <footer class="footer">
-    <p>&copy; <b>2026 Arcade X</b> by Dhatri</p>
     <p>Contact us</p>
+    <p>&copy; <b>2026 Arcade X</b> by Dhatri</p>
 </footer>
 
+
+<div class="login-modal" id="loginModal">
+
+  <div class="login-box">
+    <span id="closeBtn">&times;</span>
+
+    <p class="grad-text" id ="loginHeading">Login</h2></p>
+
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <a class="logintext">Forgot Password?</a>
+
+    <button>Login</button>
+    <span class="logintext">Don't have an account?<a>Sign Up</a></span>
+
+  </div>
+
+</div>
+<script src="app.js"></script>
 </body>
 </html>
 

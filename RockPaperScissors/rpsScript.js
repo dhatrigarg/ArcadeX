@@ -13,6 +13,9 @@ let winPercent = 0;
 
 let resultBtn = document.querySelector(".btn");
 
+let playerChoice = document.getElementById("playerChoice");
+let compChoice = document.getElementById("compChoice");
+
 rock.addEventListener("click", function() {
     playGame("Rock");
 });
@@ -28,6 +31,9 @@ function playGame(userChoice) {
     let choice_list=["Rock", "Paper", "Scissors"];
     let randomIndex = Math.floor(Math.random() * 3);
     let computerChoice = choice_list[randomIndex];
+
+    playerChoice.innerText = `Player : ${userChoice}`;
+    compChoice.innerText = `Computer : ${computerChoice}`;
 
     if (userChoice === computerChoice) {
         resultBtn.innerText = "Its a Draw";

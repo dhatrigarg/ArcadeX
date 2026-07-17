@@ -70,6 +70,25 @@ h4 {
     }
 }
 
+.showChoice{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: large;
+  margin-top: 5px;
+}
+
+#playerChoice{
+  background-color: #8B5CF6;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#compChoice{
+  background-color:#f63b6d;
+  padding: 5px;
+  border-radius: 3px;
+}
+
 .sideHeading {
   font-family:'Orbitron' , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
   font-weight: 700;
