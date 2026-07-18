@@ -1,16 +1,9 @@
+console.log("JS loaded");
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
   import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } 
   from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
-  const firebaseConfig = {
-  apiKey: "xx",
-  authDomain: "xx",
-  projectId: "xx",
-  storageBucket: "xx",
-  messagingSenderId: "xx",
-  appId: "xx",
-  measurementId: "xx"
-};
+import firebaseConfig from "./config.js";
 
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
