@@ -58,6 +58,28 @@ body {
   background-color: #4a20c9e2;
 }
 
+.nav-links {
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;  
+  transition: transform 10s ease-in-out;
+}
+
+.nav-links a {
+position: relative;
+color: rgb(253, 252, 252);
+text-decoration: none;
+font-size: 18px;
+background-color: #7041ff;
+padding: 8px 15px;
+border-radius: 5px
+}
+
+.nav-links a:hover {
+  background-color: #5124da;
+}
+
 .grad-text {
     background: linear-gradient(
         90deg,
@@ -306,6 +328,25 @@ h2 {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.contact {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.contact a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.65);
+  transition: 0.3s;
+}
+
+.contact a:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
 .login-modal {
   display: none;
   position: fixed;
@@ -376,4 +417,5 @@ h2 {
 .login-box a{
   color: #a57ffd;
   text-decoration: underline;
+  cursor: pointer;
 }

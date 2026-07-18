@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcade X</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -79,7 +80,30 @@
     </div>
 
 <footer class="footer">
-    <p>Contact us</p>
+    <div class="contact">
+        <p>Contact :</p> 
+  
+  <a href="https://linkedin.com/in/dhatri-garg-a74b1734a" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
+
+  <a href="https://github.com/dhatrigarg" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+
+  <a href="https://instagram.com/dhatrigarg" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+  <a href="mailto:dhatrigarg67@gmail.com">
+    <i class="fas fa-envelope"></i>
+  </a>
+
+  <a href="tel:+917900724820">
+    <i class="fas fa-phone"></i>
+  </a>
+
+</div>
     <p>&copy; <b>2026 Arcade X</b> by Dhatri</p>
 </footer>
 
@@ -89,19 +113,23 @@
   <div class="login-box">
     <span id="closeBtn">&times;</span>
 
-    <p class="grad-text" id ="loginHeading">Login</h2></p>
+    <p class="grad-text" id ="loginHeading">Login</p>
 
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Password">
-    <a class="logintext">Forgot Password?</a>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <a href="#" class="logintext">Forgot Password?</a>
 
-    <button>Login</button>
-    <span class="logintext">Don't have an account?<a>Sign Up</a></span>
+    <button onclick="login()">Login</button>
+
+    <span class="logintext">Don't have an account?<a href="#" onclick="signup(); return false;">Sign Up</a></span>
 
   </div>
 
 </div>
+
+<script type="module" src="firebase.js"></script>
 <script src="app.js"></script>
+
 </body>
 </html>
 
