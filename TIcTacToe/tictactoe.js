@@ -107,9 +107,11 @@ tttBoxes.forEach(function(tttBox) {
 
         currentPlayer = currentPlayer === "X"?"O":"X";
         chanceOf.innerText = currentPlayer;
+        status.innerText = `Player ${currentPlayer} turn`;
 
         if (isComputerMode && currentPlayer === "O") {
             isComputerThinking = true;
+            status.innerText = "Computer (O) is thinking...";
             setTimeout(computerMove, 400);
         }
     })
@@ -117,7 +119,7 @@ tttBoxes.forEach(function(tttBox) {
 
 function computerMove() {
     if (!isComputerThinking) return;
-
+    
     try {
         const board = getBoardState();
         if (!board.includes("")) return;
@@ -140,6 +142,7 @@ function computerMove() {
 
         currentPlayer = "X";
         chanceOf.innerText = currentPlayer;
+        status.innerText = `Player ${currentPlayer} turn`;
     } finally {
         isComputerThinking = false;
     }
