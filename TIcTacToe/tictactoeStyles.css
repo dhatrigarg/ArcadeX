@@ -33,3 +33,32 @@
 }
 .x {color: rgb(184, 71, 255);}
 .o {color: rgb(255, 73, 103);}
+
+.playerNumber {
+  display: flex;
+  justify-content: center;
+}
+
+.playerNumber button{
+  color: white;
+  background-color: #3a3a3b70;
+  padding: 8px 12px;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.playerNumber button:first-child {
+  border-right: none;
+}
+
+.playerNumber button:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.playerNumber button:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.playerNumber button.active {
+  background: #8b5cf6;
+}

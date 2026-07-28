@@ -15,6 +15,22 @@ let player2 = 0;
 let drawScore = document.getElementById("drawScore");
 let draw = 0;
 
+let isComputerMode = false;
+
+const modeButtons = document.querySelectorAll(".playerNumber button");
+
+modeButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    modeButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    if (btn.innerText.includes("Computer")) {
+      isComputerMode = true;
+    } else {
+      isComputerMode = false;
+    }
+  });
+});
 
 tttBoxes.forEach(function(tttBox) {
     tttBox.addEventListener("click", () => {
@@ -55,8 +71,104 @@ tttBoxes.forEach(function(tttBox) {
 
         currentPlayer = currentPlayer === "X"?"O":"X";
         chanceOf.innerText = currentPlayer;
+
+        if (isComputerMode && currentPlayer === "O" && !gameOver) {
+            setTimeout(computerMove, 400);
+        }
     })
 })
+
+function computerMove() {
+    let bestMove = minimax(getBoardState(), "O").index;
+
+    let box = tttBoxes[bestMove];
+    box.innerText = "O";
+    box.classList.add("o");
+
+    let winner = checkWinner();
+    if (winner) {
+        resetBtn.innerText = `Player ${winner} wins! Tap to play a new game.`;
+        gameOver = true;
+        status.innerText = "Game Over";
+        player2++;
+        player2Score.innerText = player2;
+        return;
+    }
+
+    if (checkDraw()) {
+        resetBtn.innerText = "Its a Draw! Tap to play again.";
+        gameOver = true;
+        status.innerText = "Game Over";
+        draw++;
+        drawScore.innerText = draw;
+        return;
+    }
+
+    currentPlayer = currentPlayer === "X"?"O":"X";
+    chanceOf.innerText = currentPlayer;
+}
+
+function getBoardState() {
+    return Array.from(tttBoxes).map(box => box.innerText);
+}
+
+function minimax(board, player) {
+    let emptySpots = board
+        .map((val, i) => val === "" ? i : null)
+        .filter(v => v !== null);
+
+    if (checkWinnerForBoard(board, "X")) return { score: -10 };
+    if (checkWinnerForBoard(board, "O")) return { score: 10 };
+    if (emptySpots.length === 0) return { score: 0 };
+
+    let moves = [];
+
+    for (let i = 0; i < emptySpots.length; i++) {
+        let move = {};
+        move.index = emptySpots[i];
+
+        board[emptySpots[i]] = player;
+
+        if (player === "O") {
+            let result = minimax(board, "X");
+            move.score = result.score;
+        } else {
+            let result = minimax(board, "O");
+            move.score = result.score;
+        }
+
+        board[emptySpots[i]] = "";
+        moves.push(move);
+    }
+
+    let bestMove;
+
+    if (player === "O") {
+        let bestScore = -Infinity;
+        for (let i = 0; i < moves.length; i++) {
+            if (moves[i].score > bestScore) {
+                bestScore = moves[i].score;
+                bestMove = i;
+            }
+        }
+    } else {
+        let bestScore = Infinity;
+        for (let i = 0; i < moves.length; i++) {
+            if (moves[i].score < bestScore) {
+                bestScore = moves[i].score;
+                bestMove = i;
+            }
+        }
+    }
+
+    return moves[bestMove];
+}
+
+function checkWinnerForBoard(board, player) {
+    return winnerPattern.some(pattern => {
+        return pattern.every(index => board[index] === player);
+    });
+}
 
 resetBtn.addEventListener("click",() => {
     resetBtn.innerText = "Reset Game";
