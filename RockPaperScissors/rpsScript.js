@@ -16,13 +16,13 @@ let resultBtn = document.querySelector(".btn");
 let playerChoice = document.getElementById("playerChoice");
 let compChoice = document.getElementById("compChoice");
 
-rock.addEventListener("click", function() {
+Rock.addEventListener("click", function() {
     playGame("Rock");
 });
-paper.addEventListener("click", function() {
+Paper.addEventListener("click", function() {
     playGame("Paper");
 });
-scissors.addEventListener("click", function() {
+Scissors.addEventListener("click", function() {
     playGame("Scissors");
 });
         
@@ -36,7 +36,7 @@ function playGame(userChoice) {
     compChoice.innerText = `Computer : ${computerChoice}`;
 
     if (userChoice === computerChoice) {
-        resultBtn.innerText = "Its a Draw";
+        resultBtn.innerText = "It's a Draw";
     } else if (
         (userChoice==="Rock" && computerChoice==="Scissors")  || 
         (userChoice==="Paper" && computerChoice==="Rock") || 

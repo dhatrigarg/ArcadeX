@@ -11,7 +11,7 @@ let movesShow = document.getElementById("Moves");
 
 let btn = document.querySelector(".btn");
 
-hasWon=false;
+let hasWon=false;
 
 const board = [
     [0,0,0,0],
@@ -217,7 +217,7 @@ function resetGame(){
         }
     }
 
-    btn.innerText = "Reset game";
+    btn.innerText = "Reset Game";
 
     score = 0;
     scoreShow.innerText = score;

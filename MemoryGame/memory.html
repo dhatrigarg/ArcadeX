@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tile Rush 2048</title>
+    <title>The Memory Game</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../RockPaperScissors/rpsStyles.css">
-    <link rel="stylesheet" href="the2048.css">
+    <link rel="stylesheet" href="memory.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -18,13 +18,13 @@
             <a href="../index.html">Home</a>
         </div>
     </nav>
-    <h3><span class="first">TILE</span>
-        <span class="second">RUSH</span>
-        <span class="third">2048</span></h3>
+    <h3><span class="first">THE</span>
+        <span class="second">MEMORY</span>
+        <span class="third">GAME</span></h3>
     
         
-        <p class="features-sub" id="features-sub-one">Numbers collide and grow</p>
-        <p class="features-sub" id="features-sub-two">Aim for 2048 glory</p>
+        <p class="features-sub" id="features-sub-one">Flip. Think. Match.</p>
+        <p class="features-sub" id="features-sub-two">A simple game with a powerful memory challenge.</p>
         
         <section class="container">
             <div class="box left">
@@ -32,9 +32,9 @@
                 <span><i class="fa-solid fa-question" style="color:#A855F7;"></i></span><span>  HOW TO PLAY</span>
             </div>
             <div class="points">
-                <p>➡️ Swipe to move tiles</p>
-                <p>🔢 Merge same numbers to grow</p>
-                <p>🎯 Reach the 2048 tile to win</p>
+                <p>🃏 Flip two cards.</p>
+                <p>🧠 Remember the match.</p>
+                <p>🏆 Clear all pairs.</p>
             </div>
         </div>
         <div class="box center">
@@ -44,17 +44,21 @@
                 <div class="cell"></div>
                 <div class="cell"></div>
                 <div class="cell"></div>
-                
-                <div class="cell"></div>
-                <div class="cell"></div>
-                <div class="cell"></div>
                 <div class="cell"></div>
                 
                 <div class="cell"></div>
                 <div class="cell"></div>
                 <div class="cell"></div>
                 <div class="cell"></div>
+                <div class="cell"></div>
                 
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                
+                <div class="cell"></div>
                 <div class="cell"></div>
                 <div class="cell"></div>
                 <div class="cell"></div>
@@ -67,13 +71,14 @@
                 <span><i class="fa-solid fa-trophy" style="color:#A855F7;"></i></span><span>  YOUR SCORE</span>
             </div>
             <div class="points" id="rightPoints">
-                <p>🌟  Score : <span id="Score" class="first"> 0</span></p>
-                <p>👣  Moves : <span id="Moves" class="second"> 0</span></p>
-                <p>🔢  Max Tile : <span id="maxTile" class="third"> 0</span></p>
+                <p>🃏 Pairs Found : <span id="Pairs" class="first">0</span></p>
+                <p>⏱️ Time : <span id="Time" class="second">0:00</span></p>
+                <p>👣 Moves Taken : <span id="Moves" class="third">0</span></p>
             </div>
         </div>
     </section>
 
     <script src="the2048.js"></script>
+</div>
 </body>
 </html>
