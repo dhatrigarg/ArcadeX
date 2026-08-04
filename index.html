@@ -1,21 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arcade X</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="logo">
-            <img src="images/logo.png" alt="ArcadeX Logo">
-        </div>
-        <div class="nav-links">
-            <button id="loginBtn">Login</button>
-        </div>
+      <div class="logo">
+        <img src="images/logo.png" alt="ArcadeX Logo" />
+      </div>
+      <div class="nav-links">
+        <button id="loginBtn">Login</button>
+      </div>
     </nav>
 
     <h1><span class="grad-text">Play Mini Games Online</span></h1>
@@ -25,24 +27,29 @@
     <p class="features-sub">Everything you need for endless fun in one place</p>
 
     <div class="features">
+      <div class="featureBox">
+        <img src="images/feature1.png" alt="Feature 1" class="feature-image" />
+        <h4 class="feature-title" style="color: #936ffe">Fun Games</h4>
+        <p class="feature-description">
+          Enjoy a variety of exciting mini game any time.
+        </p>
+      </div>
 
-        <div class="featureBox">
-            <img src="images/feature1.png" alt="Feature 1" class="feature-image">
-            <h4 class="feature-title" style="color: #936ffe;">Fun Games</h4>
-            <p class="feature-description">Enjoy a variety of exciting mini game any time.</p>
-        </div>
+      <div class="featureBox">
+        <img src="images/feature2.png" alt="Feature 2" class="feature-image" />
+        <h4 class="feature-title" style="color: #3b82f6">Quick and Easy</h4>
+        <p class="feature-description">
+          Jump in and play instantly. No downloads needed.
+        </p>
+      </div>
 
-        <div class="featureBox">
-            <img src="images/feature2.png" alt="Feature 2" class="feature-image">
-            <h4 class="feature-title" style="color: #3B82F6 ;">Quick and Easy</h4>
-            <p class="feature-description">Jump in and play instantly. No downloads needed.</p>
-        </div>
-
-        <div class="featureBox">
-            <img src="images/feature3.png" alt="Feature 3" class="feature-image">
-            <h4 class="feature-title" style="color: #F43F5E;">Play Anywhere</h4>
-            <p class="feature-description">Play on any device, anywhere, at any time.</p>
-        </div>
+      <div class="featureBox">
+        <img src="images/feature3.png" alt="Feature 3" class="feature-image" />
+        <h4 class="feature-title" style="color: #f43f5e">Play Anywhere</h4>
+        <p class="feature-description">
+          Play on any device, anywhere, at any time.
+        </p>
+      </div>
     </div>
 
     <h3 class="featuresHeading">And so much more..</h3>
@@ -52,85 +59,110 @@
     <p class="ourGames-sub">Games built with love and care for all players</p>
 
     <div class="allGames">
+      <div class="gameBox">
+        <img src="images/game1.png" alt="Game 1" class="gameImage" />
+        <button
+          class="playButton"
+          onclick="window.location.href = 'RockPaperScissors/rps.html'"
+        >
+          Play Now
+        </button>
+      </div>
 
-        <div class="gameBox">
-            <img src="images/game1.png" alt="Game 1" class="gameImage">
-            <button class="playButton" onclick="window.location.href='RockPaperScissors/rps.html'">Play Now</button>
-        </div>
+      <div class="gameBox">
+        <img src="images/game2.png" alt="Game 2" class="gameImage" />
+        <button
+          class="playButton"
+          onclick="window.location.href = 'TicTacToe/tictactoe.html'"
+        >
+          Play Now
+        </button>
+      </div>
 
-        <div class="gameBox">
-            <img src="images/game2.png" alt="Game 2" class="gameImage">
-            <button class="playButton" onclick="window.location.href='TicTacToe/tictactoe.html'">Play Now</button>
-        </div>
+      <div class="gameBox">
+        <img src="images/game3.png" alt="Game 3" class="gameImage" />
+        <button
+          class="playButton"
+          onclick="window.location.href = '2048/the2048.html'"
+        >
+          Play Now
+        </button>
+      </div>
 
-        <div class="gameBox">
-            <img src="images/game3.png" alt="Game 3" class="gameImage">
-            <button class="playButton" onclick="window.location.href='2048/the2048.html'">Play Now</button>
-        </div>
+      <div class="gameBox">
+        <img src="images/game4.png" alt="Game 4" class="gameImage" />
+        <button
+          class="playButton"
+          onclick="window.location.href = 'MemoryGame/memory.html'"
+        >
+          Play Now
+        </button>
+      </div>
 
-        <div class="gameBox">
-            <img src="images/game4.png" alt="Game 4" class="gameImage">
-            <button class="playButton" onclick="window.location.href='MemoryGame/memory.html'">Play Now</button>
-        </div>
-
-        <div class="gameBox">
-            <img src="images/game5.png" alt="Game 5" class="gameImage">
-            <button class="playButton" onclick="window.location.href='gameHub/rock-paper-scissors.html'">Play Now</button>
-        </div>
+      <div class="gameBox">
+        <img src="images/game5.png" alt="Game 5" class="gameImage" />
+        <button
+          class="playButton"
+          onclick="window.location.href = 'gameHub/rock-paper-scissors.html'"
+        >
+          Play Now
+        </button>
+      </div>
     </div>
 
-<footer class="footer">
-    <div class="contact">
-        <p>Contact :</p> 
-  
-  <a href="https://linkedin.com/in/dhatri-garg-a74b1734a" target="_blank">
-    <i class="fab fa-linkedin"></i>
-  </a>
+    <footer class="footer">
+      <div class="contact">
+        <p>Contact :</p>
 
-  <a href="https://github.com/dhatrigarg" target="_blank">
-    <i class="fab fa-github"></i>
-  </a>
+        <a href="https://linkedin.com/in/dhatri-garg-a74b1734a" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
 
-  <a href="https://instagram.com/dhatrigarg" target="_blank">
-    <i class="fab fa-instagram"></i>
-  </a>
+        <a href="https://github.com/dhatrigarg" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
 
-  <a href="mailto:dhatrigarg67@gmail.com">
-    <i class="fas fa-envelope"></i>
-  </a>
+        <a href="https://instagram.com/dhatrigarg" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
 
-  <a href="tel:+917900724820">
-    <i class="fas fa-phone"></i>
-  </a>
+        <a href="mailto:dhatrigarg67@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
 
-</div>
-    <p>&copy; <b>2026 Arcade X</b> by Dhatri</p>
-</footer>
+        <a href="tel:+917900724820">
+          <i class="fas fa-phone"></i>
+        </a>
+      </div>
+      <p>&copy; <b>2026 Arcade X</b> by Dhatri</p>
+    </footer>
 
+    <div class="login-modal" id="loginModal">
+      <div class="login-box">
+        <span id="closeBtn">&times;</span>
 
-<div class="login-modal" id="loginModal">
+        <p class="grad-text" id="loginHeading">Login</p>
 
-  <div class="login-box">
-    <span id="closeBtn">&times;</span>
+        <input type="email" id="email" placeholder="Email" />
+        <input type="password" id="password" placeholder="Password" />
+        <a href="#" class="logintext">Forgot Password?</a>
 
-    <p class="grad-text" id ="loginHeading">Login</p>
+        <button onclick="login()">Login</button>
 
-    <input type="email" id="email" placeholder="Email">
-    <input type="password" id="password" placeholder="Password">
-    <a href="#" class="logintext">Forgot Password?</a>
+        <span class="logintext"
+          >Don't have an account?<a
+            href="#"
+            onclick="
+              signup();
+              return false;
+            "
+            >Sign Up</a
+          ></span
+        >
+      </div>
+    </div>
 
-    <button onclick="login()">Login</button>
-
-    <span class="logintext">Don't have an account?<a href="#" onclick="signup(); return false;">Sign Up</a></span>
-
-  </div>
-
-</div>
-
-<script type="module" src="firebase.js"></script>
-<script src="app.js"></script>
-
-</body>
+    <script type="module" src="firebase.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
-
-

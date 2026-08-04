@@ -1,45 +1,49 @@
 .game {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: center;
-    width: fit-content;
-    gap: 3px;
-    background-color: #333470a5;
-    padding: 3px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
-    border: 1px solid rgba(50, 143, 250, 0.423);
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  width: fit-content;
+  gap: 3px;
+  background-color: #333470a5;
+  padding: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  border: 1px solid rgba(50, 143, 250, 0.423);
 }
 .gamebox {
-    width: clamp(4rem, 5vw, 6rem);
-    height: clamp(4rem, 5vw, 6rem);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #071222;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 179, 250, 0.336);
-    font-size: xx-large;
-    font-weight: 700;
+  width: clamp(4rem, 5vw, 6rem);
+  height: clamp(4rem, 5vw, 6rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #071222;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 179, 250, 0.336);
+  font-size: xx-large;
+  font-weight: 700;
 }
 #status {
-    font-family:cursive , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
-    font-size: clamp(0.875rem, 2vw, 1rem);
-    text-align: center;
-    margin-top: 10px;
-    color: #f5f5f5;
+  font-family: cursive, "Poppins", "Inter", "Segoe UI", sans-serif;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  text-align: center;
+  margin-top: 10px;
+  color: #f5f5f5;
 }
-.x {color: rgb(184, 71, 255);}
-.o {color: rgb(255, 73, 103);}
+.x {
+  color: rgb(184, 71, 255);
+}
+.o {
+  color: rgb(255, 73, 103);
+}
 
 .playerNumber {
   display: flex;
   justify-content: center;
 }
 
-.playerNumber button{
+.playerNumber button {
   color: white;
   background-color: #3a3a3b70;
   padding: 8px 12px;

@@ -1,78 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../RockPaperScissors/rpsStyles.css">
-    <link rel="stylesheet" href="tictactoeStyles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../RockPaperScissors/rpsStyles.css" />
+    <link rel="stylesheet" href="tictactoeStyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="logo">
-            <img src="../images/logo.png" alt="ArcadeX Logo">
-        </div>
-        <div class="nav-links">
-            <a href="../index.html">Home</a>
-        </div>
+      <div class="logo">
+        <img src="../images/logo.png" alt="ArcadeX Logo" />
+      </div>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+      </div>
     </nav>
-    <h3><span class="first">TIC</span>
-        <span class="second">TAC</span>
-        <span class="third">TOE</span></h3>
-    
-        
-        <p class="features-sub" id="features-sub-one">The classic game of Xs and Os.</p>
-        <p class="features-sub" id="features-sub-two">Challenge your friend or computer.</p>
+    <h3>
+      <span class="first">TIC</span>
+      <span class="second">TAC</span>
+      <span class="third">TOE</span>
+    </h3>
 
-        <div class="playerNumber">
-        <button class="active"><i class="fa-solid fa-user-group"></i> vs Player</button>
-        <button><i class="fa-solid fa-robot"></i> vs Computer</button>
+    <p class="features-sub" id="features-sub-one">
+      The classic game of Xs and Os.
+    </p>
+    <p class="features-sub" id="features-sub-two">
+      Challenge your friend or computer.
+    </p>
+
+    <div class="playerNumber">
+      <button class="active">
+        <i class="fa-solid fa-user-group"></i> vs Player
+      </button>
+      <button><i class="fa-solid fa-robot"></i> vs Computer</button>
     </div>
-        
-        <section class="container">
-            <div class="box left">
-            <div class="sideHeading">
-                <span><i class="fa-solid fa-question" style="color:#A855F7;"></i></span><span>  HOW TO PLAY</span>
-            </div>
-            <div class="points">
-                <p>🔄 X and O take turns</p>
-                <p>3️⃣ Get 3 in a row to win</p>
-                <p>🤝 Board full? It's a draw</p>
-            </div>
+
+    <section class="container">
+      <div class="box left">
+        <div class="sideHeading">
+          <span
+            ><i class="fa-solid fa-question" style="color: #a855f7"></i></span
+          ><span> HOW TO PLAY</span>
         </div>
-        <div class="box center">
-            <h3 class="grad-text" id="featuresMain">Play the game</h3>
-            <p id="status">Player <span id="chanceOf">X</span> Turn</p> 
-            <div class="game">
-                <div class="gamebox"></div>
-                <div class="gamebox"></div>
-                <div class="gamebox"></div>
-                
-                <div class="gamebox"></div>
-                <div class="gamebox"></div>
-                <div class="gamebox"></div>
-                
-                <div class="gamebox"></div>
-                <div class="gamebox"></div>
-                <div class="gamebox"></div>
-            </div>
-            <button class="btn">Reset Game</button>
+        <div class="points">
+          <p>🔄 X and O take turns</p>
+          <p>3️⃣ Get 3 in a row to win</p>
+          <p>🤝 Board full? It's a draw</p>
         </div>
-        <div class="box right">
-            <div class="sideHeading">
-                <span><i class="fa-solid fa-trophy" style="color:#A855F7;"></i></span><span>  YOUR SCORE</span>
-            </div>
-            <div class="points" id="rightPoints">
-                <p>🎊  Wins(X) : <span id="player1Score" class="first"> 0</span></p>
-                <p>🎉  Wins(O) : <span id="player2Score" class="second"> 0</span></p>
-                <p>🤝  Draws : <span id="drawScore" class="third"> 0</span></p>
-            </div>
+      </div>
+      <div class="box center">
+        <h3 class="grad-text" id="featuresMain">Play the game</h3>
+        <p id="status">Player <span id="chanceOf">X</span> Turn</p>
+        <div class="game">
+          <div class="gamebox"></div>
+          <div class="gamebox"></div>
+          <div class="gamebox"></div>
+
+          <div class="gamebox"></div>
+          <div class="gamebox"></div>
+          <div class="gamebox"></div>
+
+          <div class="gamebox"></div>
+          <div class="gamebox"></div>
+          <div class="gamebox"></div>
         </div>
+        <button class="btn">Reset Game</button>
+      </div>
+      <div class="box right">
+        <div class="sideHeading">
+          <span><i class="fa-solid fa-trophy" style="color: #a855f7"></i></span
+          ><span> YOUR SCORE</span>
+        </div>
+        <div class="points" id="rightPoints">
+          <p>🎊 Wins(X) : <span id="player1Score" class="first"> 0</span></p>
+          <p>🎉 Wins(O) : <span id="player2Score" class="second"> 0</span></p>
+          <p>🤝 Draws : <span id="drawScore" class="third"> 0</span></p>
+        </div>
+      </div>
     </section>
 
     <script src="tictactoe.js"></script>
-</div>
-</body>
+  </body>
 </html>

@@ -5,7 +5,7 @@
 }
 
 h3 {
-  font-family: fantasy , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+  font-family: fantasy, "Poppins", "Inter", "Segoe UI", sans-serif;
   margin-top: 20px;
   font-weight: 100;
   font-size: clamp(50px, 7vw, 60px);
@@ -31,7 +31,7 @@ h4 {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr; 
+  grid-template-columns: 1fr 2fr 1fr;
   gap: 20px;
   padding: 20px;
   align-items: start;
@@ -45,7 +45,8 @@ h4 {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.left, .right {
+.left,
+.right {
   opacity: 0.9;
   transform: scale(0.7);
 }
@@ -58,40 +59,40 @@ h4 {
   .container {
     grid-template-columns: 1fr;
   }
-  
+
   .center {
     width: 100%;
   }
-  
+
   .left,
   .right {
-    width: 65%;           
-    justify-self: center;   
-    transform: none;        
+    width: 65%;
+    justify-self: center;
+    transform: none;
   }
 }
 
-.showChoice{
+.showChoice {
   display: flex;
   justify-content: space-evenly;
   font-size: large;
   margin-top: 5px;
 }
 
-#playerChoice{
-  background-color: #8B5CF6;
+#playerChoice {
+  background-color: #8b5cf6;
   padding: 5px;
   border-radius: 3px;
 }
 
-#compChoice{
-  background-color:#f63b6d;
+#compChoice {
+  background-color: #f63b6d;
   padding: 5px;
   border-radius: 3px;
 }
 
 .sideHeading {
-  font-family:'Orbitron' , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+  font-family: "Orbitron", "Poppins", "Inter", "Segoe UI", sans-serif;
   font-weight: 700;
   font-size: clamp(10px, 4.5vw, 30px);
   margin-top: 2rem;
@@ -99,7 +100,7 @@ h4 {
 }
 
 .points {
-  font-family:'Orbitron' , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+  font-family: "Orbitron", "Poppins", "Inter", "Segoe UI", sans-serif;
   font-size: clamp(10px, 4.5vw, 30px);
   text-align: left;
   margin-top: 10px;
@@ -108,11 +109,11 @@ h4 {
   flex-direction: column;
   gap: 15px;
   font-weight: 500;
-  color: rgb(200, 197, 197)
+  color: rgb(200, 197, 197);
 }
 
-#featuresMain{
-  font-family: 'Orbitron' , 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+#featuresMain {
+  font-family: "Orbitron", "Poppins", "Inter", "Segoe UI", sans-serif;
   font-weight: 700;
   font-size: clamp(8px, 4vw, 25px);
 }
@@ -140,7 +141,7 @@ h4 {
 .rpsBox {
   padding: clamp(0.5rem, 0.5vw, 1rem);
   background-color: #071222;
-  flex: 1 1 300px; 
+  flex: 1 1 300px;
   max-width: 300px;
   text-align: center;
 }
@@ -152,15 +153,15 @@ h4 {
   }
 }
 
-.btn{
+.btn {
   background: linear-gradient(
     90deg,
-    #3B82F6,
-    #6366F1,
-    #8B5CF6,
-    #7C3AED,
-    #EC4899,
-    #EF4444
+    #3b82f6,
+    #6366f1,
+    #8b5cf6,
+    #7c3aed,
+    #ec4899,
+    #ef4444
   );
   color: white;
   padding: 5px 10px;

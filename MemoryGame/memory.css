@@ -1,5 +1,5 @@
 .grid {
-    margin: 10px auto;
+  margin: 10px auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
@@ -11,8 +11,8 @@
 }
 
 .cell {
-    width: 100%;
-    background: linear-gradient(135deg, #9e5dfa, #2668f8, #f63b6d);
+  width: 100%;
+  background: linear-gradient(135deg, #9e5dfa, #2668f8, #f63b6d);
   border-radius: 8px;
   display: flex;
   align-items: center;

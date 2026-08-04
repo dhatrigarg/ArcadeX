@@ -1,5 +1,5 @@
 .grid {
-    margin: 10px auto;
+  margin: 10px auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
@@ -23,14 +23,47 @@
   aspect-ratio: 1 / 0.75;
 }
 
-.cell-2   { background: #374151; border: 1px solid rgba(255, 255, 255, 0.384);}   
-.cell-4   { background: #1d4ed8; border: 1px solid rgba(255, 255, 255, 0.384);}   
-.cell-8   { background: #7c3aed; border: 1px solid rgba(255, 255, 255, 0.384);}   
-.cell-16  { background: #9333ea; border: 1px solid rgba(255, 255, 255, 0.384);}   
-.cell-32  { background: #c026d3; border: 1px solid rgba(255, 255, 255, 0.384);}   
-.cell-64  { background: #e11d48; border: 1px solid rgba(255, 255, 255, 0.384);}   
-.cell-128 { background: #f97316; border: 1px solid rgba(255, 255, 255, 0.384);}   
-.cell-256 { background: #f59e0b; border: 1px solid rgba(255, 255, 255, 0.384);}   
-.cell-512 { background: #eab308; border: 1px solid rgba(255, 255, 255, 0.384);}
-.cell-1024{ background: #84cc16; border: 1px solid rgba(255, 255, 255, 0.384);}
-.cell-2048{ background: #22c55e; border: 1px solid rgba(255, 255, 255, 0.384);}   
+.cell-2 {
+  background: #374151;
+  border: 1px solid rgba(255, 255, 255, 0.384);
+}
+.cell-4 {
+  background: #1d4ed8;
+  border: 1px solid rgba(255, 255, 255, 0.384);
+}
+.cell-8 {
+  background: #7c3aed;
+  border: 1px solid rgba(255, 255, 255, 0.384);
+}
+.cell-16 {
+  background: #9333ea;
+  border: 1px solid rgba(255, 255, 255, 0.384);
+}
+.cell-32 {
+  background: #c026d3;
+  border: 1px solid rgba(255, 255, 255, 0.384);
+}
+.cell-64 {
+  background: #e11d48;
+  border: 1px solid rgba(255, 255, 255, 0.384);
+}
+.cell-128 {
+  background: #f97316;
+  border: 1px solid rgba(255, 255, 255, 0.384);
+}
+.cell-256 {
+  background: #f59e0b;
+  border: 1px solid rgba(255, 255, 255, 0.384);
+}
+.cell-512 {
+  background: #eab308;
+  border: 1px solid rgba(255, 255, 255, 0.384);
+}
+.cell-1024 {
+  background: #84cc16;
+  border: 1px solid rgba(255, 255, 255, 0.384);
+}
+.cell-2048 {
+  background: #22c55e;
+  border: 1px solid rgba(255, 255, 255, 0.384);
+}

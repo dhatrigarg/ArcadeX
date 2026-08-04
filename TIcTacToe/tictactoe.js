@@ -18,9 +18,9 @@ let gameOver = false;
 let isComputerMode = false;
 let isComputerThinking = false;
 
-modeButtons.forEach(btn => {
+modeButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    modeButtons.forEach(b => b.classList.remove("active"));
+    modeButtons.forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
 
     if (btn.innerText.includes("Computer")) {
@@ -31,196 +31,202 @@ modeButtons.forEach(btn => {
   });
 });
 
-const winnerPattern = [ 
-    [0,1,2],[3,4,5],[6,7,8],
-    [0,3,6],[1,4,7],[2,5,8],
-    [0,4,8],[2,4,6]];
+const winnerPattern = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6],
+];
 
 function checkWinner() {
-    for (let pattern of winnerPattern){
-        let [a,b,c] = pattern;
+  for (let pattern of winnerPattern) {
+    let [a, b, c] = pattern;
 
-        if (tttBoxes[a].innerText !== "" &&
-            tttBoxes[a].innerText === tttBoxes[b].innerText &&
-            tttBoxes[a].innerText === tttBoxes[c].innerText
-        )
-        return tttBoxes[a].innerText;
-    }
-    return null;
+    if (
+      tttBoxes[a].innerText !== "" &&
+      tttBoxes[a].innerText === tttBoxes[b].innerText &&
+      tttBoxes[a].innerText === tttBoxes[c].innerText
+    )
+      return tttBoxes[a].innerText;
+  }
+  return null;
 }
 
 function checkDraw() {
-    for (let tttBox of tttBoxes) {
-        if (tttBox.innerText === "") {
-            return false;
-        }
+  for (let tttBox of tttBoxes) {
+    if (tttBox.innerText === "") {
+      return false;
     }
-    return true;
+  }
+  return true;
 }
 
 function isDraw() {
-    resetBtn.innerText = "Its a Draw! Tap to play again.";
-    gameOver = true;
-    isComputerThinking = false;
-    status.innerText = "Game Over";
-    draw++;
-    drawScore.innerText = draw ;
-    return;
+  resetBtn.innerText = "Its a Draw! Tap to play again.";
+  gameOver = true;
+  isComputerThinking = false;
+  status.innerText = "Game Over";
+  draw++;
+  drawScore.innerText = draw;
+  return;
 }
 
 function isWinner(winner) {
-    resetBtn.innerText = `Player ${winner} wins! Tap to play a new game.`;
-    gameOver=true;
-    isComputerThinking = false;
-    status.innerText = "Game Over";
-    if (winner === "X"){
-        player1++;
-        player1Score.innerText=player1;
-    } else {
-        player2++;
-        player2Score.innerText=player2;
-    }
-    return;
+  resetBtn.innerText = `Player ${winner} wins! Tap to play a new game.`;
+  gameOver = true;
+  isComputerThinking = false;
+  status.innerText = "Game Over";
+  if (winner === "X") {
+    player1++;
+    player1Score.innerText = player1;
+  } else {
+    player2++;
+    player2Score.innerText = player2;
+  }
+  return;
 }
 
-tttBoxes.forEach(function(tttBox) {
-    tttBox.addEventListener("click", () => {
-        if (gameOver) return;
-        if (tttBox.innerText !== "") return;
-        if (isComputerThinking) return;
-        if (isComputerMode && currentPlayer === "O") return;
+tttBoxes.forEach(function (tttBox) {
+  tttBox.addEventListener("click", () => {
+    if (gameOver) return;
+    if (tttBox.innerText !== "") return;
+    if (isComputerThinking) return;
+    if (isComputerMode && currentPlayer === "O") return;
 
-        tttBox.innerText = currentPlayer;
-        tttBox.classList.add(currentPlayer === "X" ? "x" : "o");
-        
+    tttBox.innerText = currentPlayer;
+    tttBox.classList.add(currentPlayer === "X" ? "x" : "o");
 
-        let winner = checkWinner();
-        if (winner) {
-            isWinner(winner)
-            return;
-        }
+    let winner = checkWinner();
+    if (winner) {
+      isWinner(winner);
+      return;
+    }
 
-        if(checkDraw()){
-            isDraw()
-            return;
-        }
+    if (checkDraw()) {
+      isDraw();
+      return;
+    }
 
-        currentPlayer = currentPlayer === "X"?"O":"X";
-        chanceOf.innerText = currentPlayer;
-        status.innerText = `Player ${currentPlayer} turn`;
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    chanceOf.innerText = currentPlayer;
+    status.innerText = `Player ${currentPlayer} turn`;
 
-        if (isComputerMode && currentPlayer === "O") {
-            isComputerThinking = true;
-            status.innerText = "Computer (O) is thinking...";
-            setTimeout(computerMove, 400);
-        }
-    })
-})
+    if (isComputerMode && currentPlayer === "O") {
+      isComputerThinking = true;
+      status.innerText = "Computer (O) is thinking...";
+      setTimeout(computerMove, 400);
+    }
+  });
+});
 
 function computerMove() {
-    if (!isComputerThinking) return;
-    
-    try {
-        const board = getBoardState();
-        if (!board.includes("")) return;
+  if (!isComputerThinking) return;
 
-        let bestMove = minimax(board, "O").index;
-        let box = tttBoxes[bestMove];
-        box.innerText = "O";
-        box.classList.add("o");
+  try {
+    const board = getBoardState();
+    if (!board.includes("")) return;
 
-        let winner = checkWinner();
-        if (winner) {
-            isWinner(winner);
-            return;
-        }
+    let bestMove = minimax(board, "O").index;
+    let box = tttBoxes[bestMove];
+    box.innerText = "O";
+    box.classList.add("o");
 
-        if (checkDraw()) {
-            isDraw();
-            return;
-        }
-
-        currentPlayer = "X";
-        chanceOf.innerText = currentPlayer;
-        status.innerText = `Player ${currentPlayer} turn`;
-    } finally {
-        isComputerThinking = false;
+    let winner = checkWinner();
+    if (winner) {
+      isWinner(winner);
+      return;
     }
+
+    if (checkDraw()) {
+      isDraw();
+      return;
+    }
+
+    currentPlayer = "X";
+    chanceOf.innerText = currentPlayer;
+    status.innerText = `Player ${currentPlayer} turn`;
+  } finally {
+    isComputerThinking = false;
+  }
 }
 
 function getBoardState() {
-    return Array.from(tttBoxes).map(box => box.innerText);
+  return Array.from(tttBoxes).map((box) => box.innerText);
 }
 
 function minimax(board, player) {
-    let emptySpots = board
-        .map((val, i) => val === "" ? i : null)
-        .filter(v => v !== null);
+  let emptySpots = board
+    .map((val, i) => (val === "" ? i : null))
+    .filter((v) => v !== null);
 
-    if (checkWinnerForBoard(board, "X")) return { score: -10 };
-    if (checkWinnerForBoard(board, "O")) return { score: 10 };
-    if (emptySpots.length === 0) return { score: 0 };
+  if (checkWinnerForBoard(board, "X")) return { score: -10 };
+  if (checkWinnerForBoard(board, "O")) return { score: 10 };
+  if (emptySpots.length === 0) return { score: 0 };
 
-    let moves = [];
+  let moves = [];
 
-    for (let i = 0; i < emptySpots.length; i++) {
-        let move = {};
-        move.index = emptySpots[i];
+  for (let i = 0; i < emptySpots.length; i++) {
+    let move = {};
+    move.index = emptySpots[i];
 
-        board[emptySpots[i]] = player;
-
-        if (player === "O") {
-            let result = minimax(board, "X");
-            move.score = result.score;
-        } else {
-            let result = minimax(board, "O");
-            move.score = result.score;
-        }
-
-        board[emptySpots[i]] = "";
-        moves.push(move);
-    }
-
-    let bestMove;
+    board[emptySpots[i]] = player;
 
     if (player === "O") {
-        let bestScore = -Infinity;
-        for (let i = 0; i < moves.length; i++) {
-            if (moves[i].score > bestScore) {
-                bestScore = moves[i].score;
-                bestMove = i;
-            }
-        }
+      let result = minimax(board, "X");
+      move.score = result.score;
     } else {
-        let bestScore = Infinity;
-        for (let i = 0; i < moves.length; i++) {
-            if (moves[i].score < bestScore) {
-                bestScore = moves[i].score;
-                bestMove = i;
-            }
-        }
+      let result = minimax(board, "O");
+      move.score = result.score;
     }
 
-    return moves[bestMove];
+    board[emptySpots[i]] = "";
+    moves.push(move);
+  }
+
+  let bestMove;
+
+  if (player === "O") {
+    let bestScore = -Infinity;
+    for (let i = 0; i < moves.length; i++) {
+      if (moves[i].score > bestScore) {
+        bestScore = moves[i].score;
+        bestMove = i;
+      }
+    }
+  } else {
+    let bestScore = Infinity;
+    for (let i = 0; i < moves.length; i++) {
+      if (moves[i].score < bestScore) {
+        bestScore = moves[i].score;
+        bestMove = i;
+      }
+    }
+  }
+
+  return moves[bestMove];
 }
 
 function checkWinnerForBoard(board, player) {
-    return winnerPattern.some(pattern => {
-        return pattern.every(index => board[index] === player);
-    });
+  return winnerPattern.some((pattern) => {
+    return pattern.every((index) => board[index] === player);
+  });
 }
 
-resetBtn.addEventListener("click",() => {
-    resetBtn.innerText = "Reset Game";
-    gameOver = false;
-    isComputerThinking = false;
-    
-    tttBoxes.forEach(function(tttBox){
-        tttBox.innerText = "";
-        tttBox.classList.remove("x", "o");
-    })
-    
-    currentPlayer = "X";
-    chanceOf.innerText = currentPlayer;
-    status.innerText = `Player ${currentPlayer} turn`
-})
+resetBtn.addEventListener("click", () => {
+  resetBtn.innerText = "Reset Game";
+  gameOver = false;
+  isComputerThinking = false;
+
+  tttBoxes.forEach(function (tttBox) {
+    tttBox.innerText = "";
+    tttBox.classList.remove("x", "o");
+  });
+
+  currentPlayer = "X";
+  chanceOf.innerText = currentPlayer;
+  status.innerText = `Player ${currentPlayer} turn`;
+});
