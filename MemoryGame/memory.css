@@ -21,4 +21,20 @@
   font-weight: bold;
   color: white;
   aspect-ratio: 1 / 0.75;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  user-select: none;
+}
+
+.cell.flipped {
+  background: white;
+  transform: scale(1.05);
+}
+
+.cell.matched {
+  background: #d1fae5;
+  border-color: #22c55e;
+  cursor: default;
 }
