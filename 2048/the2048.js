@@ -11,7 +11,7 @@ let movesShow = document.getElementById("Moves");
 
 let btn = document.querySelector(".btn");
 
-let hasWon = false;
+let hasGameOver = false;
 
 const board = [
   [0, 0, 0, 0],
@@ -77,6 +77,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 function handleKey(e) {
+  if(hasGameOver) return;
   let oldBoard = JSON.stringify(board);
 
   if (e.key === "ArrowLeft") moveLeft();
@@ -87,7 +88,9 @@ function handleKey(e) {
   if (JSON.stringify(board) !== oldBoard) {
     moves++;
     movesShow.innerText = moves;
-    generateTiles();
+    if (!hasGameOver) {
+      generateTiles();
+    }
   }
   updateUI();
 
@@ -111,9 +114,8 @@ function move() {
         }
 
         if (row[j] === 2048) {
-          hasWon = true;
+          hasGameOver = true;
           btn.innerText = "You Win! Tap to play again.";
-          return;
         }
 
         row[j + 1] = 0;
@@ -197,6 +199,7 @@ function canMove() {
 function checkGameOver() {
   if (isBoardFull() && !canMove()) {
     btn.innerText = "Game Over! Tap to play again.";
+    hasGameOver = true
     return;
   }
 }
@@ -218,7 +221,7 @@ function resetGame() {
   movesShow.innerText = moves;
   maxTile = 0;
   maxTileShow.innerText = maxTile;
-  hasWon = false;
+  hasGameOver = false;
 
   generateTiles();
   generateTiles();
@@ -227,6 +230,8 @@ function resetGame() {
 }
 
 // Touch screen logic added
+
+document.addEventListener("touchmove", (e) => e.preventDefault(), { passive: false });
 
 let startX = 0,
   startY = 0;
@@ -237,6 +242,7 @@ document.addEventListener("touchstart", function (e) {
 });
 
 document.addEventListener("touchend", function (e) {
+  if(hasGameOver) return;
   let endX = e.changedTouches[0].clientX;
   let endY = e.changedTouches[0].clientY;
 
@@ -256,7 +262,9 @@ document.addEventListener("touchend", function (e) {
   if (JSON.stringify(board) !== oldBoard) {
     moves++;
     movesShow.innerText = moves;
-    generateTiles();
+    if (!hasGameOver) {
+      generateTiles();
+    }
   }
 
   updateUI();
