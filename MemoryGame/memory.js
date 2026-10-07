@@ -5,7 +5,7 @@ const movesDisplay = document.getElementById("Moves");
 const timeDisplay = document.getElementById("Time");
 const startButton = document.querySelector(".btn");
 
-const emojis = ["🍎", "🍕", "🚀", "🐱", "⚽", "🎮", "🌈", "🔥", "🦄", "🍩"];
+const emojis = ["🌸", "🍕", "🎸", "🐣", "🦋", "🐰", "🍒", "🫧", "🕷️", "🍩"];
 
 let cards = [];
 let firstCard = null;
@@ -45,17 +45,27 @@ function startGame() {
   cards.sort(() => Math.random() - 0.5);
 
   cells.forEach((cell, index) => {
-    cell.textContent = "?";
-
+    cell.textContent = cards[index];
     cell.dataset.emoji = cards[index];
 
-    cell.classList.remove("flipped");
+    cell.classList.add("flipped");
     cell.classList.remove("matched");
 
     cell.removeEventListener("click", flipCard);
-
     cell.addEventListener("click", flipCard);
-  });
+});
+
+// Show all cards for 2 seconds
+lockBoard = true;
+
+setTimeout(() => {
+    cells.forEach((cell) => {
+        cell.textContent = "?";
+        cell.classList.remove("flipped");
+    });
+
+    lockBoard = false;
+}, 2000);
 
   timer = setInterval(() => {
     seconds++;
