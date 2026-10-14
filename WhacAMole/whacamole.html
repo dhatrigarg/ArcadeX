@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whac A Mole</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../RockPaperScissors/rpsStyles.css" />
+    <link rel="stylesheet" href="whacamole.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../images/logo.png" alt="ArcadeX Logo" />
+      </div>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+      </div>
+    </nav>
+    <h3>
+      <span class="first">WHAC</span>
+      <span class="second">A</span>
+      <span class="third">MOLE</span>
+    </h3>
+
+    <p class="features-sub" id="features-sub-one">Boink, bash, repeat</p>
+    <p class="features-sub" id="features-sub-two">Smack that mole!</p>
+
+    <section class="container">
+      <div class="box left">
+        <div class="sideHeading">
+          <span
+            ><i class="fa-solid fa-question" style="color: #a855f7"></i></span
+          ><span> HOW TO PLAY</span>
+        </div>
+        <div class="points">
+          <p>🔨 Hit the moles quickly</p>
+          <p>⏱️ Score before time runs out</p>
+          <p>🏆 Get the highest score</p>
+        </div>
+      </div>
+      <div class="box center">
+        <h3 class="grad-text" id="featuresMain">Play the game</h3>
+        <div class="grid">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <button class="btn">Start Game</button>
+      </div>
+      <div class="box right">
+        <div class="sideHeading">
+          <span><i class="fa-solid fa-trophy" style="color: #a855f7"></i></span
+          ><span> YOUR SCORE</span>
+        </div>
+        <div class="points" id="rightPoints">
+          <p>🌟 Score : <span id="Score" class="first">0</span></p>
+          <p>⏱️ Time(seconds) : <span id="Time" class="second">30</span></p>
+          <p>🔨 Successful Hits : <span id="Moves" class="third">0</span></p>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="whacamole.js"></script>
+  </body>
+</html>
