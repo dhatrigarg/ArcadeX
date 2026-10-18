@@ -66,7 +66,7 @@ cells.forEach((cell) => {
     if (cell.classList.contains("mole")) {
       hideMole(cell);
 
-      score++;
+      score = score + 10;
       successfulHits++;
 
       scoreDisplay.textContent = score;
@@ -121,6 +121,11 @@ function endGame() {
   alert(
     `Game Over!\n\nFinal Score: ${score}\nSuccessful Hits: ${successfulHits}`
   );
+
+  
+timeDisplay.textContent = "30";
+scoreDisplay.textContent = "0";
+hitsDisplay.textContent = "0";
 }
 
 startButton.addEventListener("click", startGame);
